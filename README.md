@@ -24,6 +24,7 @@
 | 教程 | 简介 | 难度 |
 |------|------|------|
 | [接入飞书多维表格](claude-code/feishu-bitable/) | 5 步让 Claude Code 拥有长期记忆，MCP 接入飞书 | 入门 |
+| [创建自定义 Skill 实战](claude-code/skill-creation/) | 从零打造「一键发布」技能，Skill 设计方法论与完整实战 | 中级 |
 
 ---
 
