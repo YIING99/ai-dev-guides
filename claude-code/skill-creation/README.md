@@ -280,5 +280,71 @@ python3 ~/.claude/skills/skill-creator/scripts/package_skill.py ~/.claude/skills
 
 ---
 
+## 附赠：两个现成 Skill 模板
+
+本教程附带了两个可直接使用的 Skill 模板源码，在 [skills/](skills/) 目录下：
+
+```
+skills/
+├── feishu-push/          # 对话知识 → 飞书多维表格
+│   ├── SKILL.md
+│   ├── references/field-mapping.md
+│   └── scripts/push_to_feishu.py
+│
+└── github-publish/       # 教程文章 → GitHub 仓库
+    ├── SKILL.md
+    ├── references/
+    │   ├── repo-structure.md
+    │   └── sanitize-rules.md
+    └── scripts/check_sensitive.sh
+```
+
+### 安装方法
+
+**3 步搞定：**
+
+```bash
+# 1. 克隆仓库（或只下载 skills 目录）
+git clone https://github.com/YIING99/ai-dev-guides.git
+cd ai-dev-guides/claude-code/skill-creation/skills
+
+# 2. 拷贝到 Claude Code 的 skills 目录
+cp -r feishu-push ~/.claude/skills/
+cp -r github-publish ~/.claude/skills/
+
+# 3. 重启 Claude Code，说「推送飞书」或「推送GitHub」测试
+```
+
+### 安装后必须改的配置
+
+**feishu-push**：
+
+打开 `~/.claude/skills/feishu-push/scripts/push_to_feishu.py`，修改头部 6 个变量：
+
+```python
+FEISHU_APP_ID = "cli_xxxxxxxxxxxxxxx"   # ← 换成你的
+FEISHU_APP_SECRET = "你的App_Secret"     # ← 换成你的
+AI_APP_TOKEN = "你的app_token_1"         # ← 换成你的资讯库表格
+AI_TABLE_ID = "你的table_id_1"          # ← 换成你的
+DEV_APP_TOKEN = "你的app_token_2"        # ← 换成你的开发库表格
+DEV_TABLE_ID = "你的table_id_2"         # ← 换成你的
+```
+
+> 不知道怎么获取这些值？参考 [接入飞书多维表格教程](../feishu-bitable/)。
+
+**github-publish**：
+
+打开 `~/.claude/skills/github-publish/references/repo-structure.md`，改成你自己的仓库路径和目录分类。
+
+### 也可以让 AI 帮你改
+
+把模板 Skill 拷贝到 `~/.claude/skills/` 后，直接告诉 Claude Code：
+
+> 「帮我把 feishu-push Skill 里的飞书凭证改成我的。我的 App ID 是 xxx，App Secret 是 xxx，表格地址是 xxx」
+
+AI 会自动帮你改好所有配置。
+
+---
+
 *本教程基于 2026-02-20 实际创建 github-publish Skill 的过程整理*
 *Claude Code Skills 机制版本：2026.2.x*
