@@ -432,6 +432,6 @@ log(`DEBUG commandAuthorized=${commandAuthorized}`);
 
 ---
 
-*作者：王营 | 2026-02-19*
+*作者：大王 | 2026-02-19 | 公众号：持续进化营*
 *环境：OpenClaw v2026.2.13 + 飞书扩展 @openclaw/feishu*
 *本文基于真实排查过程提炼，非虚构案例*

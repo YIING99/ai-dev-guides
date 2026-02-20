@@ -257,6 +257,6 @@ web_search: Search the web (Brave API)
 
 ---
 
-*作者：王营 | 2026-02-18*
+*作者：大王 | 2026-02-18 | 公众号：持续进化营*
 *实战环境：OpenClaw v2026.2.13 + Claude Sonnet 4.5 via OpenRouter + 飞书*
 *本文基于真实部署经历提炼，非虚构案例*

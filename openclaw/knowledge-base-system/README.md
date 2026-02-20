@@ -631,8 +631,7 @@ crontab -e
 
 ---
 
-*作者：KING | AI Coding Native Builder*
-*公众号：[你的公众号名称]*
+*作者：KING | 公众号：持续进化营*
 
 ---
 
@@ -642,4 +641,4 @@ crontab -e
 > - 飞书开放平台：open.feishu.cn
 > - 智谱 AI：open.bigmodel.cn
 > - DigitalOcean：digitalocean.com
-> - 文中提到的脚本和配置文件，关注公众号回复「龙虾知识库」获取
+> - 文中提到的脚本和配置文件，关注公众号「持续进化营」回复「龙虾知识库」获取

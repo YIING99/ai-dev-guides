@@ -412,6 +412,7 @@ openclaw --version
 
 ---
 
+*作者：大王 | 公众号：持续进化营*
 *教程最后更新：2026 年 2 月*
 *OpenClaw 版本：v2026.2.x*
 *如有问题，请访问 [OpenClaw 官方文档](https://docs.openclaw.ai)*

@@ -364,6 +364,7 @@ print(json.dumps(c['channels']['feishu'], indent=2, ensure_ascii=False))
 
 ---
 
+*作者：大王 | 公众号：持续进化营*
 *教程编写：2026 年 2 月 15 日*
 *基于 OpenClaw v2026.2.2-3 + 飞书开放平台实战经验*
 *包含所有实际踩过的坑和解决方案*

@@ -796,5 +796,6 @@ sleep 5 && systemctl --user is-active openclaw-gateway-y2
 
 ---
 
+*作者：大王 | 公众号：持续进化营*
 *最后更新：2026-02-18*
 *基于 OpenClaw 2026.2.13 + DigitalOcean 4GB VPS 实战验证*
