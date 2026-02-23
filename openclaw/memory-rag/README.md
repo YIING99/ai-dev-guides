@@ -1,5 +1,7 @@
 # 给 OpenClaw 龙虾装上长期记忆：Memory RAG 配置指南
 
+> **独立仓库**：本教程的完整方案（含脚本、配置示例、技术报告）已发布到独立仓库 👉 [YIING99/openclaw-memory-rag](https://github.com/YIING99/openclaw-memory-rag)
+
 > **作者**：KingMaker
 > **日期**：2026-02-23
 > **适用版本**：OpenClaw Gateway v2026.2.x
