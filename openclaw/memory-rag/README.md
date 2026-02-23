@@ -390,8 +390,8 @@ chmod +x ~/move-daily-logs.sh
 ### 5.2 设置自动定时任务
 
 ```bash
-# 添加 cron：每小时清理一次
-(crontab -l 2>/dev/null; echo '# 每小时归档 daily 日志（防止污染搜索索引）'; echo '0 * * * * $HOME/move-daily-logs.sh') | crontab -
+# 添加 cron：每天早上 6 点归档一次（daily 日志按天生成，一天一次足够）
+(crontab -l 2>/dev/null; echo '# 每天归档 daily 日志（防止污染搜索索引）'; echo '0 6 * * * $HOME/move-daily-logs.sh') | crontab -
 
 # 验证
 crontab -l | grep move-daily
@@ -581,13 +581,12 @@ chmod +x ~/sync_feishu_to_memory.py
 ```bash
 echo "=== 1. 配置文件检查 ==="
 python3 -c "
-import json
+import json, os
 c = json.load(open(os.path.expanduser('~/.openclaw/openclaw.json')))
 ms = c.get('agents',{}).get('defaults',{}).get('memorySearch',{})
 print('  provider:', ms.get('provider','❌ 未配置'))
 print('  model:', ms.get('model','❌ 未配置'))
 print('  hybrid:', '✅ 开启' if ms.get('query',{}).get('hybrid',{}).get('enabled') else '❌ 未开启')
-import os
 " 2>/dev/null || echo "  ❌ 配置文件解析失败"
 
 echo ""
@@ -675,7 +674,7 @@ npx openclaw memory search '之前好像有一篇讲XX的'
 可以，但需要注意：
 - 方案一：所有龙虾的 memory/ 指向同一目录（软链接）
 - 方案二：用 rsync 定期同步
-- 方案三：等 EvoMap 基因胶囊协议成熟后，用协议级共享
+- 方案三：各实例独立维护，按需手动复制共享的知识文件
 
 ### Q7：hybrid search 的 70/30 权重要调吗？
 
@@ -738,7 +737,7 @@ memory/ 目录只放高质量知识文件。日志、心跳、临时文件统统
 | SOUL.md | `~/.openclaw/workspace/SOUL.md` | 龙虾灵魂 + 双写规则 |
 | 向量索引 | `~/.openclaw/memory/main.sqlite` | SQLite 向量数据库 |
 | Daily 归档 | `~/.openclaw/workspace/daily-archive/` | 归档的心跳日志 |
-| 归档脚本 | `~/move-daily-logs.sh` | cron 每小时清理 daily |
+| 归档脚本 | `~/move-daily-logs.sh` | cron 每天归档 daily |
 | 同步脚本 | `~/sync_feishu_to_memory.py` | cron 每6小时同步飞书 |
 
 ---
