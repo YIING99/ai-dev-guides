@@ -18,6 +18,7 @@
 | [飞书斜杠命令修复实战](openclaw/feishu-slash-fix/) | 飞书中 `/status` 等命令无响应的根因分析与一键修复 | 入门 |
 | [AI Agent 幻觉防治实战](openclaw/anti-hallucination/) | 当你的 AI 助手自信地说谎——描述≠现实 | 入门 |
 | [飞书命令完整清单](openclaw/commands-reference/) | OpenClaw 26+ 斜杠命令分类速查 | 入门 |
+| [给龙虾装上长期记忆：Memory RAG](openclaw/memory-rag/) | Hybrid Search 语义检索 + 飞书知识库双写，7 步配置指南 | 中级 |
 
 ### Claude Code / AI 开发
 
