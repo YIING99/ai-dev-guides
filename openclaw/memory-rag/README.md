@@ -2,7 +2,7 @@
 
 > **独立仓库**：本教程的完整方案（含脚本、配置示例、技术报告）已发布到独立仓库 👉 [YIING99/openclaw-memory-rag](https://github.com/YIING99/openclaw-memory-rag)
 
-> **作者**：KingMaker
+> **作者**：KING
 > **日期**：2026-02-23
 > **适用版本**：OpenClaw Gateway v2026.2.x
 > **难度**：零编程基础可操作（跟着复制粘贴即可）
