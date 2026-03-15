@@ -255,6 +255,7 @@ python3 ~/.claude/skills/skill-creator/scripts/package_skill.py ~/.claude/skills
 
 | Skill 名称 | 触发场景 | 核心流程 |
 |------------|---------|----------|
+| `expert-pulse` | "把脉" / 产品决策 | 列选项 → 选专家视角 → 跨学科分析 → 推荐方案 |
 | `feishu-push` | "推送到飞书" | 提炼对话 → 分类 → 写入多维表格 |
 | `code-review` | "审查代码" | 读 diff → 检查规范 → 生成报告 |
 | `deploy-check` | "部署前检查" | 环境验证 → 配置核对 → 健康检查 |
@@ -280,12 +281,15 @@ python3 ~/.claude/skills/skill-creator/scripts/package_skill.py ~/.claude/skills
 
 ---
 
-## 附赠：两个现成 Skill 模板
+## 附赠：三个现成 Skill 模板
 
-本教程附带了两个可直接使用的 Skill 模板源码，在 [skills/](skills/) 目录下：
+本教程附带了三个可直接使用的 Skill 模板源码，在 [skills/](skills/) 目录下：
 
 ```
 skills/
+├── expert-pulse/         # 把脉 — 产品决策专家评审
+│   └── SKILL.md
+│
 ├── feishu-push/          # 对话知识 → 飞书多维表格
 │   ├── SKILL.md
 │   ├── references/field-mapping.md
@@ -309,10 +313,11 @@ git clone https://github.com/YIING99/ai-dev-guides.git
 cd ai-dev-guides/claude-code/skill-creation/skills
 
 # 2. 拷贝到 Claude Code 的 skills 目录
+cp -r expert-pulse ~/.claude/skills/
 cp -r feishu-push ~/.claude/skills/
 cp -r github-publish ~/.claude/skills/
 
-# 3. 重启 Claude Code，说「推送飞书」或「推送GitHub」测试
+# 3. 重启 Claude Code，说「把脉」、「推送飞书」或「推送GitHub」测试
 ```
 
 ### 安装后必须改的配置
